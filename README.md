@@ -1,62 +1,42 @@
-﻿# D93：[RS485通道](https://github.com/OS-Q/D93)
-
+﻿# [RS485转换](https://github.com/OS-Q/D93)
 [![sites](OS-Q/OS-Q.png)](http://www.OS-Q.com)
-
-#### 归属有线转换：[W14](https://github.com/OS-Q/W14)
-
+#### 归属接口转换：[W14](https://github.com/OS-Q/W14)
 #### 关于系统架构：[OS-Q](https://github.com/OS-Q/OS-Q)
+Edge-Q -> 体系 Q[1,4] -> 节点 M[1,12] -> 平台 W[1,52] -> 设备 D[1,365]
+### [设备描述](https://github.com/OS-Q/D93/wiki) 
 
-## [设备描述](https://github.com/OS-Q/D93/wiki) 
+由于RS-232接口标现较早，有以下四点不足：
 
-RS485通道设备，将串口/USB/IIC/SPI等多种信号转换为RS485
+* （1） 接口信号电平值较高，易损坏接口电路的芯片，和TTL有不同。 
+* （2） 传输速率较低，异步传输时波特率为20Kbps。 
+* （3） 接口使用一根信号线和一根信号返回线而构成共地的传输形式， 容易产生共模干扰抗噪声干扰性弱。 
+* （4） 最大传输距离标准值为50英尺，实际上也只能用在50米左右。 
 
-### [资源](OS-Q/)
+RS-485特性：
 
-#### [文档资料](docs/)
+* 逻辑“1”以两线间的电压差为+（2—6）V表示
+* 逻辑“0”以两线间的电压差为-（2—6）V表示
 
-主要的芯片手册和参考设计
+RS-485优势：
 
-#### [工程代码](project/)
+* 电平与TTL电平兼容，可方便与TTL电路连接
+* RS-485的数据最高传输速率为10Mbps 
+* RS-485接口是采用平衡驱动器和差分接收器的组合，抗共模干能力增强。 
+* RS-485接口在总线上是允许连接多达128个收发器。
 
-包括软件工程源码文件
+转换芯片：
 
----
+- [32节点：SN75176](docs/)
+- [64节点：SN75LBC184](docs/)
+- [128节点：MAX487](docs/)
+- [256节点：MAX1482](docs/)
 
-- 边缘设备命名规则：体系 Q:[1,4] -> 节点 M:[1,12] -> 平台 W:[1,52] -> 设备 D:[1,365]
+### [设备资源](https://github.com/OS-Q/D93) 
 
-- naming patterns：system Q[1,4] -> node M[1,12] -> platform W[1,52] -> device D[1,365]
-
-## [同级设备](https://github.com/OS-Q/W14/wiki) 
-
-#### D92：[USB](https://github.com/OS-Q/D92)
-
-将数据转换为USB通信数据，方便适配各种标准设备
-
-#### -> D93：[RS485](https://github.com/OS-Q/D93)
-
-将数据转换为RS485信号，用于长距离和控制类适配
-
-#### D94：[Ethernet](https://github.com/OS-Q/D94)
-
-通过以太网转发数据，实现数据入网或者长距通信
-
-#### D95：[NULL](https://github.com/OS-Q/D95)
+- [资源](src/)
+- [文档](docs/)
+- [工程](project/)
 
 
-#### D96：[NULL](https://github.com/OS-Q/D96)
-
-
-
-#### D97：[NULL](https://github.com/OS-Q/D97)
-
-
-
-#### D98：[NULL](https://github.com/OS-Q/D98)
-
-
-
----
-
-####  © qitas@qitas.cn
-###  [OS-Q redefined Operation System](http://www.OS-Q.com)
-####  @ 2019-1-19
+### [OS-Q : Operation System for edge devices](http://www.OS-Q.com/Edge/D93)
+####  2019-4-21  
