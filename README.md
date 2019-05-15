@@ -37,6 +37,16 @@ RS-485优势：
 - [文档](docs/)
 - [工程](project/)
 
+### [设备相关](https://github.com/OS-Q/D93) 
+
+* W14：[电气转换](https://github.com/OS-Q/W14)
+    * D92：[IIC](https://github.com/OS-Q/D92)
+    * D93：RS485-L
+    * D94：[RS485-A](https://github.com/OS-Q/D94)
+    * D95：[USB-L](https://github.com/OS-Q/D95)
+    * D96：[USB-A](https://github.com/OS-Q/D96)
+    * D97：[Ethernet-L](https://github.com/OS-Q/D97)
+    * D98：[Ethernet-A](https://github.com/OS-Q/D98)
 
 ### [OS-Q : Operation System for edge devices](http://www.OS-Q.com/Edge/D93)
 ####  2019-4-21  
