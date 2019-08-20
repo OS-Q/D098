@@ -1,7 +1,6 @@
 #if defined(__AVR__)
 #include <avr/pgmspace.h>
 #else
-// for compatiblity with Arduino Due and Teensy 3.0 and maybe others?
 #define PROGMEM
 #define PGM_P  const char *
 #define pgm_read_byte(addr) (*(const unsigned char *)(addr))
@@ -12,8 +11,8 @@
 #endif
 #endif
 #endif
-#include <string.h> // for strcpy_P or strcpy
-#include "TimeLib.h"
+#include <string.h>
+#include "NtimeLib.h"
  
 // the short strings for each day or month must be exactly dt_SHORT_STR_LEN
 #define dt_SHORT_STR_LEN  3 // the length of short strings
