@@ -111,10 +111,10 @@ String ICACHE_FLASH_ATTR NtpClient::getDeviceUptimeString() {
 
 	deviceUptime uptime = getDeviceUptime();
 
-	return	String(uptime.days) + " days, " +
-	        String(uptime.hours) + " hours, " +
-	        String(uptime.mins) + " mins, " +
-	        String(uptime.secs) + " secs";
+	return	String(uptime.days) + " 天, " +
+	        String(uptime.hours) + " 时, " +
+	        String(uptime.mins) + " 分, " +
+	        String(uptime.secs) + " 秒";
 
 }
 

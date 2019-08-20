@@ -3,9 +3,6 @@
 #define _Time_h
 
 #include <inttypes.h>
-#ifndef __AVR__
-#include <sys/types.h> // for __time_t_defined, but avr libc lacks sys/types.h
-#endif
 
 #if !defined(__time_t_defined) // avoid conflict with newlib or other posix libc
 typedef unsigned long time_t;

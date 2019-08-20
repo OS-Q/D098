@@ -2,10 +2,14 @@
 #define NTP_H_
 
 #include <ESP8266WiFi.h>
-#include "AsyncUDP.h"
-#include "NtimeLib.h"
+//#include "AsyncUDP.h"
+//#include "NtimeLib.h"
 
 #define NTP_PACKET_SIZE 48 // NTP time is in the first 48 bytes of message
+
+#if !defined(__time_t_defined) // avoid conflict with newlib or other posix libc
+typedef unsigned long time_t;
+#endif
 
 struct deviceUptime {
 	long days;
