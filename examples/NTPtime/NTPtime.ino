@@ -1,12 +1,10 @@
-#include <NTPtimeESP.h>
-#define DEBUG_ON
+#include <NTPtime.h>
 
 NTPtime NTPch("cn.pool.ntp.org");   // Choose server pool as required
-char *ssid      = "test";               // Set you WiFi SSID
-char *password  = "400100";               // Set you WiFi password
+char *ssid      = "ziroom3303";               // Set you WiFi SSID
+char *password  = "4001001111";               // Set you WiFi password
 
 /*
- * The structure contains following fields:
  * struct strDateTime
 {
   byte hour;
